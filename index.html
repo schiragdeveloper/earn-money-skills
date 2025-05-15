@@ -1,119 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Earn Money Skills | Chirag</title>
-  <!-- Google verification meta tag (replace with your code) -->
-  <meta name="google-site-verification" content="PASTE-YOUR-CODE-HERE" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Earn Money Skills - Course Access</title>
+<style>
+  /* Reset and basic */
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0; padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: #00b386;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+  h1 {
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: #00e6a1;
+    text-align: center;
+  }
+  p.subtitle {
+    margin-top: 0; margin-bottom: 25px;
+    color: #7fd1b9;
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  .btn {
+    background-color: transparent;
+    border: 2px solid #00b386;
+    color: #00b386;
+    padding: 12px 24px;
+    margin: 10px 0;
+    width: 220px;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    user-select: none;
+  }
+  .btn:hover {
+    background-color: #00b386;
+    color: #121212;
+  }
+  .btn:focus {
+    outline: none;
+    box-shadow: 0 0 8px #00e6a1;
+  }
+  .btn:active {
+    transform: scale(0.95);
+  }
 
-  <!-- SEO Meta -->
-  <meta name="description" content="Learn top skills to earn money online - by Chirag">
-  <meta name="author" content="Chirag Sathwara">
+  /* Modal overlay */
+  .modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0,0,0,0.75);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  .modal {
+    background-color: #222;
+    border-radius: 12px;
+    padding: 25px 30px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 0 20px #00b386;
+    text-align: center;
+    color: #00e6a1;
+    animation: modalFadeIn 0.4s ease forwards;
+  }
+  @keyframes modalFadeIn {
+    from {opacity: 0; transform: translateY(-40px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+  .modal h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+  }
+  .modal p {
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
+  .modal button {
+    background-color: #00b386;
+    border: none;
+    color: #121212;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+  }
+  .modal button:hover {
+    background-color: #00e6a1;
+  }
+  .modal button:active {
+    transform: scale(0.95);
+  }
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  /* Course content hidden initially */
+  .course-content {
+    margin-top: 30px;
+    background-color: #003322;
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    color: #00ffbb;
+    font-weight: 600;
+    font-size: 1rem;
+    display: none;
+    line-height: 1.5;
+  }
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    body {
-      background: linear-gradient(135deg, #1e1e2f, #2a2a40);
-      color: white;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 2rem;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      font-weight: 600;
-      color: #00ffd5;
-    }
-
-    header p {
-      font-size: 1rem;
-      color: #ccc;
-    }
-
-    .button-group {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
+  /* Responsive */
+  @media (max-width: 480px) {
+    .btn {
       width: 100%;
-      max-width: 400px;
-      margin-top: 2rem;
     }
-
-    .action-button {
-      background: #00ffd5;
-      color: #000;
-      border: 2px solid #00ffd5;
-      padding: 0.8rem 1rem;
-      font-size: 1.1rem;
-      font-weight: bold;
-      border-radius: 8px;
-      transition: all 0.3s ease;
-      cursor: pointer;
-      text-align: center;
-    }
-
-    .action-button:hover {
-      background: transparent;
-      color: #00ffd5;
-    }
-
-    .action-button:active {
-      transform: scale(0.97);
-    }
-
-    footer {
-      margin-top: auto;
-      padding: 1rem;
+    .course-content {
       font-size: 0.9rem;
-      color: #888;
+      padding: 15px;
     }
-
-    @media (max-width: 500px) {
-      header h1 {
-        font-size: 1.8rem;
-      }
-
-      .action-button {
-        font-size: 1rem;
-      }
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
 
-  <header>
-    <h1>Welcome to Chirag's Earn Money Skills</h1>
-    <p>Learn, Grow & Start Earning Online</p>
-  </header>
+<h1>Welcome to Chirag's Earn Money Skills</h1>
+<p class="subtitle">Learn, Grow & Start Earning Online</p>
 
-  <div class="button-group">
-    <div class="action-button" onclick="window.location.href='https://www.youtube.com/@chiragskills'">YouTube Channel</div>
-    <div class="action-button" onclick="window.location.href='https://www.instagram.com'">Instagram</div>
-    <div class="action-button" onclick="window.location.href='https://wa.me/919999999999'">WhatsApp Group</div>
-    <div class="action-button" onclick="alert('Coming Soon!')">Buy Course</div>
+<button class="btn" onclick="openLink('https://youtube.com')">YouTube Channel</button>
+<button class="btn" onclick="openLink('https://instagram.com')">Instagram</button>
+<button class="btn" onclick="openLink('https://chat.whatsapp.com')">WhatsApp Group</button>
+<button class="btn" id="buyCourseBtn">Buy Course</button>
+
+<!-- Modal -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <h2 id="modalTitle">Course Purchase</h2>
+    <p>Do you want to confirm your payment and get full access to the course?</p>
+    <button id="confirmPaymentBtn">Confirm Payment</button>
   </div>
+</div>
 
-  <footer>
-    © 2025 Developed by <strong>Chirag Sathwara</strong> | All Rights Reserved
-  </footer>
+<!-- Course Content -->
+<div class="course-content" id="courseContent">
+  <h2>Full Course Content</h2>
+  <p>Welcome to the full course! Here you will learn how to start earning online with detailed step-by-step tutorials, insider tips, and proven strategies.</p>
+  <ul>
+    <li>Module 1: Introduction to Online Earning</li>
+    <li>Module 2: Setting Up Your Online Profiles</li>
+    <li>Module 3: Content Creation & Marketing</li>
+    <li>Module 4: Monetization Techniques</li>
+    <li>Module 5: Scaling Your Earnings</li>
+    <li>Bonus: Tools & Resources</li>
+  </ul>
+</div>
+
+<script>
+  const modalOverlay = document.getElementById('modalOverlay');
+  const buyCourseBtn = document.getElementById('buyCourseBtn');
+  const confirmPaymentBtn = document.getElementById('confirmPaymentBtn');
+  const courseContent = document.getElementById('courseContent');
+
+  // Open external links safely in new tab
+  function openLink(url) {
+    window.open(url, '_blank', 'noopener');
+  }
+
+  // Show modal on Buy Course click
+  buyCourseBtn.addEventListener('click', () => {
+    modalOverlay.style.display = 'flex';
+  });
+
+  // Confirm payment and show course content
+  confirmPaymentBtn.addEventListener('click', () => {
+    modalOverlay.style.display = 'none';
+    buyCourseBtn.style.display = 'none'; // Hide buy button after payment
+    courseContent.style.display = 'block';
+    window.scrollTo({top: courseContent.offsetTop, behavior: 'smooth'});
+  });
+
+  // Close modal if clicked outside modal box
+  modalOverlay.addEventListener('click', (e) => {
+    if(e.target === modalOverlay){
+      modalOverlay.style.display = 'none';
+    }
+  });
+</script>
 
 </body>
 </html>
