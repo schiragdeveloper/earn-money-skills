@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills to Earn Money Online</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    body {
+      background: #121212;
+      color: #fff;
+      padding: 20px;
+      transition: background 0.4s, color 0.4s;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2.2rem;
+      color: #00d9ff;
+    }
+    .toggle-theme {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #00d9ff;
+      color: #000;
+      padding: 8px 15px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: transform 0.2s ease;
+    }
+    .toggle-theme:hover {
+      transform: scale(1.1);
+    }
+    .skill-card {
+      background: #1e1e1e;
+      padding: 20px;
+      margin-bottom: 15px;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+    .skill-card:hover {
+      transform: scale(1.02);
+    }
+    .skill-title {
+      font-size: 1.4rem;
+      margin-bottom: 10px;
+      color: #00ffa1;
+    }
+    .skill-description {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    .cta {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: transparent;
+      border: 2px solid #00d9ff;
+      color: #00d9ff;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+    .cta:hover {
+      background: #00d9ff;
+      color: #000;
+      transform: scale(1.05);
+    }
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.7rem;
+      }
+      .skill-title {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="toggle-theme" onclick="toggleTheme()">Light Mode</div>
+
+  <div class="container">
+    <h1>Top Skills to Earn Money Online</h1>
+
+    <!-- Freelancing Skill with WhatsApp Group -->
+    <div class="skill-card">
+      <div class="skill-title">1. Freelancing</div>
+      <div class="skill-description">
+        Freelancing platforms like Fiverr, Upwork, and Freelancer allow you to offer skills like design, writing, and coding to global clients.
+        <div>
+          <a href="https://chat.whatsapp.com/LfOtPGp4pJJL675moNrPQE" target="_blank">
+            <button class="cta">Join WhatsApp Group</button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-title">2. Graphic Design</div>
+      <div class="skill-description">
+        Use tools like Canva, Photoshop, and Illustrator to create logos, social media posts, banners, etc., and sell your design services.
+        <div><button class="cta">Explore Design</button></div>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-title">3. Web Development</div>
+      <div class="skill-description">
+        Learn HTML, CSS, JavaScript, and frameworks to build websites for clients or your own online business.
+        <div><button class="cta">Start Coding</button></div>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-title">4. Content Writing</div>
+      <div class="skill-description">
+        Write articles, blogs, or scripts for YouTube channels, websites, or clients and get paid per word or article.
+        <div><button class="cta">Write & Earn</button></div>
+      </div>
+    </div>
+
+    <div class="skill-card">
+      <div class="skill-title">5. Digital Marketing</div>
+      <div class="skill-description">
+        Learn SEO, social media marketing, and email campaigns to help businesses grow online.
+        <div><button class="cta">Start Marketing</button></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let dark = true;
+    function toggleTheme() {
+      const body = document.body;
+      dark = !dark;
+      body.style.background = dark ? "#121212" : "#f9f9f9";
+      body.style.color = dark ? "#fff" : "#000";
+      document.querySelector('.toggle-theme').innerText = dark ? "Light Mode" : "Dark Mode";
+    }
+  </script>
+</body>
+</html>
