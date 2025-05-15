@@ -3,202 +3,273 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Earn Money Skills - Course Access</title>
+<meta name="description" content="Full detailed course to earn money online step-by-step" />
+<title>Earn Money Online - Full Course</title>
 <style>
-  /* Reset and basic */
+  /* Reset and base */
   * {
     box-sizing: border-box;
   }
   body {
-    margin: 0; padding: 0;
+    margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #121212;
-    color: #00b386;
+    background: #121212;
+    color: #eee;
     display: flex;
     flex-direction: column;
-    align-items: center;
     min-height: 100vh;
-    padding: 20px;
   }
-  h1 {
-    margin-bottom: 5px;
+  h1, h2 {
+    text-align: center;
+  }
+  header {
+    background: #1f1f1f;
+    padding: 1rem 1.5rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.6);
+  }
+  header h1 {
+    margin: 0;
     font-weight: 700;
     font-size: 1.8rem;
-    color: #00e6a1;
-    text-align: center;
+    letter-spacing: 1.5px;
+    color: #1de9b6;
   }
-  p.subtitle {
-    margin-top: 0; margin-bottom: 25px;
-    color: #7fd1b9;
-    font-size: 1rem;
-    font-weight: 400;
+
+  main {
+    flex-grow: 1;
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
   }
-  .btn {
-    background-color: transparent;
-    border: 2px solid #00b386;
-    color: #00b386;
-    padding: 12px 24px;
-    margin: 10px 0;
-    width: 220px;
-    font-weight: 600;
-    font-size: 1rem;
-    border-radius: 6px;
+
+  /* Accordion container */
+  .accordion {
+    border-radius: 8px;
+    background: #222;
+    box-shadow: 0 4px 20px rgba(29, 233, 182, 0.3);
+    overflow: hidden;
+    margin-bottom: 1.2rem;
+  }
+  .accordion-header {
+    background: transparent;
+    border: none;
+    outline: none;
     cursor: pointer;
-    transition: all 0.3s ease;
+    width: 100%;
+    padding: 1rem 1.5rem;
+    text-align: left;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #1de9b6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 3px solid #1de9b6;
+    transition: background 0.3s ease;
     user-select: none;
   }
-  .btn:hover {
-    background-color: #00b386;
-    color: #121212;
-  }
-  .btn:focus {
-    outline: none;
-    box-shadow: 0 0 8px #00e6a1;
-  }
-  .btn:active {
-    transform: scale(0.95);
+  .accordion-header:hover {
+    background: #1de9b621;
   }
 
-  /* Modal overlay */
-  .modal-overlay {
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background-color: rgba(0,0,0,0.75);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+  .accordion-header:after {
+    content: "+";
+    font-weight: 900;
+    font-size: 1.6rem;
+    transition: transform 0.3s ease;
+    color: #1de9b6;
   }
-  .modal {
-    background-color: #222;
-    border-radius: 12px;
-    padding: 25px 30px;
-    width: 90%;
-    max-width: 400px;
-    box-shadow: 0 0 20px #00b386;
-    text-align: center;
-    color: #00e6a1;
-    animation: modalFadeIn 0.4s ease forwards;
-  }
-  @keyframes modalFadeIn {
-    from {opacity: 0; transform: translateY(-40px);}
-    to {opacity: 1; transform: translateY(0);}
-  }
-  .modal h2 {
-    margin-top: 0;
-    margin-bottom: 15px;
-  }
-  .modal p {
-    font-size: 1rem;
-    margin-bottom: 25px;
-  }
-  .modal button {
-    background-color: #00b386;
-    border: none;
-    color: #121212;
-    padding: 12px 24px;
-    font-size: 1rem;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-  }
-  .modal button:hover {
-    background-color: #00e6a1;
-  }
-  .modal button:active {
-    transform: scale(0.95);
+  .accordion-header.active:after {
+    content: "−";
+    transform: rotate(180deg);
   }
 
-  /* Course content hidden initially */
-  .course-content {
-    margin-top: 30px;
-    background-color: #003322;
-    padding: 20px;
-    border-radius: 12px;
-    width: 90%;
-    max-width: 600px;
-    color: #00ffbb;
-    font-weight: 600;
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    background: #111;
+    color: #ccc;
+    padding: 0 1.5rem;
+    transition: max-height 0.35s ease;
     font-size: 1rem;
-    display: none;
     line-height: 1.5;
+  }
+  .accordion-content p,
+  .accordion-content li {
+    margin: 0.5rem 0;
+  }
+  .accordion-content ul {
+    padding-left: 1.3rem;
+  }
+
+  footer {
+    background: #1f1f1f;
+    text-align: center;
+    padding: 1rem 0.5rem;
+    color: #666;
+    font-size: 0.9rem;
+    border-top: 1px solid #333;
+  }
+
+  /* Button style for pay button */
+  .pay-button {
+    display: inline-block;
+    margin: 2rem auto 0;
+    background: transparent;
+    border: 2px solid #1de9b6;
+    color: #1de9b6;
+    padding: 0.7rem 2rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    user-select: none;
+    display: block;
+  }
+  .pay-button:hover {
+    background: #1de9b6;
+    color: #121212;
+    box-shadow: 0 0 10px #1de9b6;
+  }
+  .pay-button:active {
+    transform: scale(0.95);
   }
 
   /* Responsive */
-  @media (max-width: 480px) {
-    .btn {
-      width: 100%;
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 1.4rem;
     }
-    .course-content {
+    .accordion-header {
+      font-size: 1.1rem;
+      padding: 0.8rem 1rem;
+    }
+    .accordion-content {
       font-size: 0.9rem;
-      padding: 15px;
+      padding: 0 1rem;
+    }
+    .pay-button {
+      font-size: 1rem;
+      padding: 0.6rem 1.5rem;
+      margin: 1.5rem auto 0;
     }
   }
 </style>
 </head>
 <body>
 
-<h1>Welcome to Chirag's Earn Money Skills</h1>
-<p class="subtitle">Learn, Grow & Start Earning Online</p>
+<header>
+  <h1>Earn Money Online - Full Course</h1>
+</header>
 
-<button class="btn" onclick="openLink('https://youtube.com')">YouTube Channel</button>
-<button class="btn" onclick="openLink('https://instagram.com')">Instagram</button>
-<button class="btn" onclick="openLink('https://chat.whatsapp.com')">WhatsApp Group</button>
-<button class="btn" id="buyCourseBtn">Buy Course</button>
+<main>
 
-<!-- Modal -->
-<div class="modal-overlay" id="modalOverlay">
-  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <h2 id="modalTitle">Course Purchase</h2>
-    <p>Do you want to confirm your payment and get full access to the course?</p>
-    <button id="confirmPaymentBtn">Confirm Payment</button>
-  </div>
-</div>
+  <button class="pay-button" onclick="alert('Payment gateway integration is pending.\nPlease integrate your UPI payment here.')">Pay ₹499 to Get Full Access</button>
 
-<!-- Course Content -->
-<div class="course-content" id="courseContent">
-  <h2>Full Course Content</h2>
-  <p>Welcome to the full course! Here you will learn how to start earning online with detailed step-by-step tutorials, insider tips, and proven strategies.</p>
-  <ul>
-    <li>Module 1: Introduction to Online Earning</li>
-    <li>Module 2: Setting Up Your Online Profiles</li>
-    <li>Module 3: Content Creation & Marketing</li>
-    <li>Module 4: Monetization Techniques</li>
-    <li>Module 5: Scaling Your Earnings</li>
-    <li>Bonus: Tools & Resources</li>
-  </ul>
-</div>
+  <section class="accordion">
+    <button class="accordion-header">Module 1: Introduction to Online Earning</button>
+    <div class="accordion-content">
+      <ul>
+        <li>1.1 Online earning kya hai?</li>
+        <li>1.2 Different online earning platforms</li>
+        <li>1.3 Pros and cons of online earning</li>
+        <li>1.4 Mindset and skills needed to succeed online</li>
+        <li>1.5 Common scams se kaise bachein</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="accordion">
+    <button class="accordion-header">Module 2: Setting Up Your Online Profiles</button>
+    <div class="accordion-content">
+      <ul>
+        <li>2.1 Professional email ID banayein</li>
+        <li>2.2 Freelance platforms par account banana (Upwork, Fiverr, Freelancer)</li>
+        <li>2.3 Social media profiles optimize karna (LinkedIn, Instagram, Facebook)</li>
+        <li>2.4 Digital wallet aur payment accounts setup karna (Paytm, Google Pay, PayPal)</li>
+        <li>2.5 Apni website ya blog ka basic setup</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="accordion">
+    <button class="accordion-header">Module 3: Content Creation & Marketing</button>
+    <div class="accordion-content">
+      <ul>
+        <li>3.1 Content kya hota hai aur kyun zaroori hai?</li>
+        <li>3.2 Blogging basics aur writing tips</li>
+        <li>3.3 YouTube channel setup aur content ideas</li>
+        <li>3.4 Social media marketing basics</li>
+        <li>3.5 SEO (Search Engine Optimization) introduction</li>
+        <li>3.6 Email marketing basics</li>
+        <li>3.7 Consistency aur engagement kaise maintain karein</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="accordion">
+    <button class="accordion-header">Module 4: Monetization Techniques</button>
+    <div class="accordion-content">
+      <ul>
+        <li>4.1 Affiliate marketing kya hai aur kaise shuru karein?</li>
+        <li>4.2 Google AdSense se paise kaise kamayein?</li>
+        <li>4.3 Sponsored content aur brand deals kaise lein?</li>
+        <li>4.4 Freelancing se paisa kamane ke tareeke</li>
+        <li>4.5 Online courses ya digital products bechna</li>
+        <li>4.6 Dropshipping aur e-commerce basics</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="accordion">
+    <button class="accordion-header">Module 5: Scaling Your Earnings</button>
+    <div class="accordion-content">
+      <ul>
+        <li>5.1 Apne business ko automate karna</li>
+        <li>5.2 Outsourcing aur team banana</li>
+        <li>5.3 Paid ads (Facebook Ads, Google Ads) se growth</li>
+        <li>5.4 Analytics ko samajhna aur improve karna</li>
+        <li>5.5 Multiple income streams banana</li>
+        <li>5.6 Long-term growth plan aur goals set karna</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="accordion">
+    <button class="accordion-header">Bonus: Tools & Resources</button>
+    <div class="accordion-content">
+      <ul>
+        <li>Top 10 free tools for content creation</li>
+        <li>Best apps for social media scheduling</li>
+        <li>Online communities aur groups jahan seekhne ko milega</li>
+        <li>Free courses aur certifications ke links</li>
+        <li>Productivity apps aur time management tips</li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  Developed by Chirag Sathwara
+</footer>
 
 <script>
-  const modalOverlay = document.getElementById('modalOverlay');
-  const buyCourseBtn = document.getElementById('buyCourseBtn');
-  const confirmPaymentBtn = document.getElementById('confirmPaymentBtn');
-  const courseContent = document.getElementById('courseContent');
-
-  // Open external links safely in new tab
-  function openLink(url) {
-    window.open(url, '_blank', 'noopener');
-  }
-
-  // Show modal on Buy Course click
-  buyCourseBtn.addEventListener('click', () => {
-    modalOverlay.style.display = 'flex';
-  });
-
-  // Confirm payment and show course content
-  confirmPaymentBtn.addEventListener('click', () => {
-    modalOverlay.style.display = 'none';
-    buyCourseBtn.style.display = 'none'; // Hide buy button after payment
-    courseContent.style.display = 'block';
-    window.scrollTo({top: courseContent.offsetTop, behavior: 'smooth'});
-  });
-
-  // Close modal if clicked outside modal box
-  modalOverlay.addEventListener('click', (e) => {
-    if(e.target === modalOverlay){
-      modalOverlay.style.display = 'none';
-    }
+  const accHeaders = document.querySelectorAll('.accordion-header');
+  accHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+      // Toggle active class
+      header.classList.toggle('active');
+      // Toggle accordion content max height
+      const content = header.nextElementSibling;
+      if (header.classList.contains('active')) {
+        content.style.maxHeight = content.scrollHeight + "px";
+      } else {
+        content.style.maxHeight = null;
+      }
+    });
   });
 </script>
 
