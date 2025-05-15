@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chirag's Earning Academy - सीखो और कमाओ</title>
+    <title>चिराग डिजिटल अकादमी - घर बैठे पैसा कमाएं</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #7c3aed;
-            --secondary: #5b21b6;
+            --primary: #6d28d9;
+            --secondary: #4c1d95;
             --accent: #f59e0b;
             --dark: #1e293b;
-            --light: #f3e8ff;
+            --light: #ede9fe;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Poppins', Arial, sans-serif;
         }
 
         body {
@@ -30,32 +30,23 @@
         header {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
-            padding: 1.2rem;
+            padding: 1.5rem;
             position: sticky;
             top: 0;
             z-index: 1000;
             box-shadow: 0 4px 30px rgba(0,0,0,0.1);
-            backdrop-filter: blur(10px);
-        }
-
-        .nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
         }
 
         .logo {
-            font-size: 2rem;
+            font-size: 2.2rem;
             font-weight: 700;
-            letter-spacing: 2px;
+            text-align: center;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
         }
 
-        /* Course Section Styles */
+        /* Course Section */
         .course-container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 4rem auto;
             padding: 2rem;
         }
@@ -65,9 +56,9 @@
             border-radius: 20px;
             padding: 2.5rem;
             margin-bottom: 3rem;
-            box-shadow: 0 12px 40px rgba(0,0,0,0.1);
-            border: 1px solid rgba(255,255,255,0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             transition: transform 0.3s;
+            border: 1px solid rgba(255,255,255,0.3);
         }
 
         .course-card:hover {
@@ -82,15 +73,19 @@
         }
 
         .course-price {
-            font-size: 1.8rem;
+            font-size: 2rem;
             color: var(--primary);
             font-weight: 700;
+            background: rgba(109, 40, 217, 0.1);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
         }
 
-        .course-details-grid {
+        .course-details {
             display: grid;
             grid-template-columns: 2fr 1fr;
-            gap: 3rem;
+            gap: 2rem;
+            margin: 2rem 0;
         }
 
         .language-list {
@@ -112,21 +107,23 @@
         }
 
         .enroll-btn {
-            background: var(--primary);
-            color: white;
-            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white !important;
+            padding: 1rem 3rem;
             border-radius: 50px;
             border: none;
             cursor: pointer;
             transition: all 0.3s;
             font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            font-size: 1.1rem;
+            display: block;
+            width: 100%;
+            margin-top: 2rem;
         }
 
         .enroll-btn:hover {
-            background: var(--secondary);
-            box-shadow: 0 8px 20px rgba(123, 52, 237, 0.3);
+            opacity: 0.9;
+            transform: scale(1.02);
         }
 
         /* Payment Section */
@@ -155,17 +152,18 @@
 
         .qr-code {
             width: 250px;
-            margin: 1rem auto;
             border: 4px solid var(--accent);
             border-radius: 15px;
+            margin: 1rem auto;
         }
 
         .upi-details {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             margin: 1.5rem 0;
             padding: 1.5rem;
             background: rgba(255,255,255,0.1);
             border-radius: 15px;
+            word-break: break-all;
         }
 
         .payment-methods {
@@ -190,8 +188,8 @@
             transform: translateX(10px);
         }
 
-        /* Developer Credit */
-        .developer-credit {
+        /* Developer Section */
+        .developer {
             text-align: center;
             padding: 3rem;
             background: var(--dark);
@@ -200,71 +198,66 @@
         }
 
         @media (max-width: 768px) {
-            .course-details-grid {
+            .course-details {
                 grid-template-columns: 1fr;
             }
             
             .payment-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .logo {
+                font-size: 1.8rem;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <nav class="nav-container">
-            <div class="logo">चिराग अकादमी</div>
-        </nav>
+        <div class="logo">चिराग डिजिटल स्किल्स</div>
     </header>
 
     <main class="course-container">
         <!-- Web Development Course -->
         <div class="course-card">
             <div class="course-header">
-                <h2>पूर्ण वेब विकास मास्टरक्लास</h2>
+                <h2>वेब डेवलपमेंट मास्टरक्लास (2024)</h2>
                 <div class="course-price">₹5999</div>
             </div>
-            <div class="course-details-grid">
+            <div class="course-details">
                 <div>
                     <h3>कोर्स विवरण:</h3>
                     <ul>
-                        <li>अवधि: 12 सप्ताह (दैनिक 2 घंटे)</li>
-                        <li>प्रोजेक्ट: 20+ वास्तविक वेबसाइटें</li>
-                        <li>सीखें: HTML5, CSS3, JavaScript, React, Node.js, MongoDB</li>
-                    </ul>
-                    
-                    <h3>मॉड्यूल:</h3>
-                    <ul>
-                        <li>वेब डिज़ाइन मूल बातें</li>
-                        <li>रिस्पॉन्सिव वेबसाइट बनाना</li>
-                        <li>ई-कॉमर्स वेबसाइट डेवलपमेंट</li>
+                        <li>🕒 अवधि: 3 महीने (दैनिक 2 घंटे)</li>
+                        <li>📂 20+ रियल वर्ल्ड प्रोजेक्ट्स</li>
+                        <li>👨💻 HTML5, CSS3, JavaScript, React, Node.js, MongoDB</li>
+                        <li>🎓 सर्टिफिकेशन समावेश</li>
                     </ul>
                 </div>
                 <div>
-                    <h3>भाषाएं:</h3>
+                    <h3>भाषा विकल्प:</h3>
                     <div class="language-list">
-                        <span class="language-tag"><i class="fas fa-language"></i>हिंदी</span>
-                        <span class="language-tag"><i class="fas fa-language"></i>English</span>
-                        <span class="language-tag"><i class="fas fa-language"></i>Gujarati</span>
+                        <span class="language-tag"><i class="fas fa-language"></i> हिंदी</span>
+                        <span class="language-tag"><i class="fas fa-language"></i> English</span>
                     </div>
-                    <button class="enroll-btn">अभी एनरोल करें</button>
+                    <button class="enroll-btn" onclick="enrollCourse('Web Development')">एनरोल करें</button>
                 </div>
             </div>
         </div>
 
-        <!-- AI Course -->
+        <!-- Mobile App Development -->
         <div class="course-card">
             <div class="course-header">
-                <h2>AI और मशीन लर्निंग</h2>
-                <div class="course-price">₹8999</div>
+                <h2>मोबाइल ऐप डेवलपमेंट</h2>
+                <div class="course-price">₹6999</div>
             </div>
-            <div class="course-details-grid">
+            <div class="course-details">
                 <div>
                     <h3>कोर्स विवरण:</h3>
                     <ul>
-                        <li>Python प्रोग्रामिंग बेसिक्स</li>
-                        <li>न्यूरल नेटवर्क और डीप लर्निंग</li>
-                        <li>रियल-वर्ल्ड AI प्रोजेक्ट्स</li>
+                        <li>📱 Android & iOS App Development</li>
+                        <li>🔥 Flutter और React Native</li>
+                        <li>📊 Firebase Backend Integration</li>
                     </ul>
                 </div>
                 <div>
@@ -272,44 +265,37 @@
                         <span class="language-tag">हिंदी</span>
                         <span class="language-tag">English</span>
                     </div>
-                    <button class="enroll-btn">अभी एनरोल करें</button>
+                    <button class="enroll-btn" onclick="enrollCourse('Mobile App Development')">एनरोल करें</button>
                 </div>
             </div>
         </div>
 
-        <!-- All Other Courses -->
-        <!-- Add similar blocks for:
-             - Mobile App Development
-             - Digital Marketing
-             - Freelancing Mastery
-             - Home Based Business
-             - Free Courses Section -->
+        <!-- 10+ और कोर्सेज यहाँ जोड़ें -->
 
         <!-- Payment Section -->
         <div class="payment-section">
-            <h2 style="text-align:center;margin-bottom:2rem;">भुगतान विकल्प</h2>
             <div class="payment-grid">
                 <div class="qr-container">
                     <img src="1000044634.jpg" alt="UPI QR Code" class="qr-code">
                     <div class="upi-details">
-                        UPI ID: chiragsathwara@fam
+                        chiragsathwara@fam
                     </div>
                 </div>
                 
                 <div class="payment-methods">
-                    <div class="payment-method" onclick="showPayment('gpay')">
+                    <div class="payment-method" onclick="handlePayment('gpay')">
                         <i class="fab fa-google-pay fa-2x"></i>
                         <div>
-                            <h4>Google Pay</h4>
-                            <p>सीधे UPI के माध्यम से भुगतान करें</p>
+                            <h3>Google Pay</h3>
+                            <p>UPI ID: chiragsathwara@fam</p>
                         </div>
                     </div>
                     
-                    <div class="payment-method" onclick="showPayment('paytm')">
-                        <i class="fas fa-wallet fa-2x"></i>
+                    <div class="payment-method" onclick="handlePayment('paytm')">
+                        <i class="fas fa-qrcode fa-2x"></i>
                         <div>
-                            <h4>Paytm Wallet</h4>
-                            <p>वॉलेट बैलेंस का उपयोग करें</p>
+                            <h3>QR कोड स्कैन करें</h3>
+                            <p>किसी भी UPI ऐप का उपयोग करें</p>
                         </div>
                     </div>
                 </div>
@@ -317,33 +303,28 @@
         </div>
     </main>
 
-    <footer class="developer-credit">
+    <footer class="developer">
         <h3>वेबसाइट डेवलपर</h3>
         <p>चिराग सथवाड़ा</p>
-        <p>फुल स्टैक डेवलपर और मेन्टर</p>
         <p>संपर्क: chiragsathwara@fam</p>
+        <p>© 2024 सर्वाधिकार सुरक्षित</p>
     </footer>
 
     <script>
-        // Enrollment Button Functionality
-        document.querySelectorAll('.enroll-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                const courseTitle = this.closest('.course-card').querySelector('h2').innerText;
-                window.location.href = "#payment";
-                alert(`${courseTitle} - एनरोलमेंट प्रक्रिया शुरू करें`);
-            });
-        });
+        // Enrollment Function
+        function enrollCourse(courseName) {
+            alert(`एनरोलमेंट शुरू करें: ${courseName}\nभुगतान सेक्शन पर रीडायरेक्ट किया जा रहा है...`);
+            window.location.href = "#payment";
+        }
 
-        // Payment Methods Handling
-        function showPayment(method) {
-            const methods = {
-                'gpay': 'Google Pay',
-                'paytm': 'Paytm Wallet'
-            };
-            
+        // Payment Handling
+        function handlePayment(method) {
             const upiId = 'chiragsathwara@fam';
-            const message = `${methods[method]} के माध्यम से भुगतान करें\nUPI ID: ${upiId}`;
-            alert(message);
+            const messages = {
+                'gpay': `Google Pay में यह UPI ID डालें:\n${upiId}`,
+                'paytm': `Paytm में QR कोड स्कैन करें\nया UPI ID डालें: ${upiId}`
+            };
+            alert(messages[method]);
         }
 
         // Smooth Scroll
